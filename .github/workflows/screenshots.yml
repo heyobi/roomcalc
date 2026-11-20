@@ -1,0 +1,42 @@
+name: App Store screenshots
+
+# Runs the XCUITest screenshot walk with sample rooms on an iPhone simulator (6.3", 1206 × 2622)
+# in English and Turkish, and uploads the PNGs as a workflow artifact.
+on:
+  workflow_dispatch:
+
+jobs:
+  shots:
+    runs-on: macos-26
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - name: Generate Xcode project
+        run: brew install xcodegen && xcodegen generate
+      - name: Take screenshots
+        run: |
+          set -o pipefail
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          d = json.load(sys.stdin)['devices']
+          names = ['iPhone 17 Pro', 'iPhone 16 Pro']
+          for want in names:
+              for k in sorted(d, reverse=True):
+                  for x in d[k]:
+                      if 'iOS' in k and x['name'] == want:
+                          print(x['udid']); sys.exit()
+          ")
+          echo "Simulator: $UDID"
+          for L in en tr; do
+            xcodebuild test -project Roomcalc.xcodeproj -scheme Roomcalc -destination "id=$UDID" \
+              -only-testing:RoomcalcUITests/ScreenshotTests/testScreens CODE_SIGNING_ALLOWED=NO \
+              -testLanguage $L -testRegion $([ $L = tr ] && echo TR || echo US) \
+              -resultBundlePath build/shots-$L.xcresult | tail -n 30
+            mkdir -p shots/$L
+            xcrun xcresulttool export attachments --path build/shots-$L.xcresult --output-path shots/$L
+          done
+          ls -R shots
+      - uses: actions/upload-artifact@v5
+        with:
+          name: screenshots
+          path: shots

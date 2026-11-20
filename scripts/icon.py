@@ -1,4 +1,4 @@
-# Draws the app icon (1024x1024, no alpha) and the splash image, then copies them into the iOS project.
+# Draws the app icon (1024x1024, no alpha) and copies it into the asset catalog.
 # A floor plan (L-shaped room with planks) inside LiDAR scan brackets, on a warm orange gradient.
 # Usage: python scripts/icon.py
 from PIL import Image, ImageDraw, ImageFilter
@@ -8,7 +8,6 @@ S = 1024
 img = Image.new('RGB', (S, S))
 d = ImageDraw.Draw(img)
 for y in range(S):
-    for_x = None
     t = y / S
     d.line([(0, y), (S, y)], fill=(int(255 - 22 * t), int(146 - 64 * t), int(66 - 54 * t)))
 glow = Image.new('RGBA', (S, S), (0, 0, 0, 0))
@@ -46,14 +45,5 @@ for (x, y, sx, sy) in [(m, m, 1, 1), (S - m, m, -1, 1), (m, S - m, 1, -1), (S - 
     d.ellipse([x - w / 2, y - w / 2, x + w / 2, y + w / 2], fill=W)
 img.save('assets/icon-1024.png')
 
-sp = Image.new('RGB', (2732, 2732), (16, 17, 20))
-small = img.resize((360, 360), Image.LANCZOS)
-mk = Image.new('L', (360, 360), 0)
-ImageDraw.Draw(mk).rounded_rectangle([0, 0, 359, 359], radius=80, fill=255)
-sp.paste(small, (1186, 1186), mk)
-sp.save('assets/splash-2732.png')
-
-shutil.copy('assets/icon-1024.png', 'ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png')
-for n in ['splash-2732x2732.png', 'splash-2732x2732-1.png', 'splash-2732x2732-2.png']:
-    shutil.copy('assets/splash-2732.png', f'ios/App/App/Assets.xcassets/Splash.imageset/{n}')
+shutil.copy('assets/icon-1024.png', 'Roomcalc/Assets.xcassets/AppIcon.appiconset/icon-1024.png')
 print('icon ok')

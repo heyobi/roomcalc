@@ -3,7 +3,7 @@ name: iOS → TestFlight
 on:
   push:
     branches: [main]
-    paths-ignore: ['**.md', 'docs/**', '.gitignore']
+    paths-ignore: ['**.md', 'store/**', '.gitignore']
   pull_request:
   workflow_dispatch:
 
@@ -17,41 +17,34 @@ env:
   PROFILE_NAME: Roomcalc CI AppStore
 
 jobs:
-  check:
-    name: Typecheck, test, build web app
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+  test:
+    # The formulas are unit-tested on a simulator before anything is built for TestFlight.
+    name: Unit tests (simulator)
+    runs-on: macos-26
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-
-  webkit:
-    # The production build must work in WebKit (the iOS engine) with no network: rooms, every material,
-    # the shopping list, persistence, metric and imperial. Nothing ships otherwise.
-    name: App in WebKit
-    needs: check
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - run: npx playwright install --with-deps webkit
-      - run: npm run build
-      - name: End-to-end check in WebKit (network blocked)
+      - name: Generate Xcode project
+        run: brew install xcodegen && xcodegen generate
+      - name: Run unit tests
         run: |
-          npx vite preview --port 4183 --strictPort &
-          npx wait-on -t 30000 http://localhost:4183 || sleep 5
-          APP_URL='http://localhost:4183/?selftest&scan' node tests/webkit/app.mjs
+          set -o pipefail
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          d = json.load(sys.stdin)['devices']
+          for k in sorted(d, reverse=True):
+              if 'iOS' in k:
+                  for x in d[k]:
+                      if x['name'].startswith('iPhone'):
+                          print(x['udid']); sys.exit()
+          ")
+          echo "Simulator: $UDID"
+          xcodebuild test -project Roomcalc.xcodeproj -scheme Roomcalc -destination "id=$UDID" \
+            -only-testing:RoomcalcTests CODE_SIGNING_ALLOWED=NO | tail -n 80
 
   prepare:
     name: Check App Store Connect
-    needs: [check, webkit]
+    needs: test
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -94,10 +87,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - name: Build web app and sync into the iOS project
-        run: npm run build && npx cap sync ios
+        with: { node-version: 22 }
+      - name: Generate Xcode project
+        run: brew install xcodegen && xcodegen generate
 
       - name: Install Apple Distribution certificate
         id: cert
@@ -129,25 +121,43 @@ jobs:
         id: profile
         run: node scripts/asc.cjs profile "${{ steps.cert.outputs.serial }}" "$PROFILE_NAME"
 
-      - name: Configure manual signing
-        env:
-          PROFILE_NAME: ${{ steps.profile.outputs.profile_name }}
-        run: node scripts/configure-signing.cjs
-
       - name: Archive
+        env:
+          PROFILE: ${{ steps.profile.outputs.profile_name }}
         run: |
           set -o pipefail
           xcodebuild archive \
-            -project ios/App/App.xcodeproj \
-            -scheme App \
+            -project Roomcalc.xcodeproj \
+            -scheme Roomcalc \
             -configuration Release \
             -destination 'generic/platform=iOS' \
-            -archivePath build/App.xcarchive | tail -n 120
+            -archivePath build/Roomcalc.xcarchive \
+            CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM="$TEAM_ID" \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
+            PROVISIONING_PROFILE_SPECIFIER="$PROFILE" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" | tail -n 120
 
       - name: Export signed IPA
+        env:
+          PROFILE: ${{ steps.profile.outputs.profile_name }}
         run: |
           set -o pipefail
-          xcodebuild -exportArchive -archivePath build/App.xcarchive -exportOptionsPlist build/ExportOptions.plist -exportPath build/ipa | tail -n 60
+          cat > build/ExportOptions.plist <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>teamID</key><string>${TEAM_ID}</string>
+            <key>signingStyle</key><string>manual</string>
+            <key>provisioningProfiles</key>
+            <dict><key>${BUNDLE_ID}</key><string>${PROFILE}</string></dict>
+            <key>uploadSymbols</key><true/>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive -archivePath build/Roomcalc.xcarchive -exportOptionsPlist build/ExportOptions.plist -exportPath build/ipa | tail -n 60
           ls -lh build/ipa/
 
       - name: Upload to App Store Connect (TestFlight)

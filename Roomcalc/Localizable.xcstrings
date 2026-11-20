@@ -1,0 +1,1136 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%lld rooms": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld oda"
+          }
+        }
+      }
+    },
+    "Add your first room to see what to buy.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ne alacağınızı görmek için ilk odanızı ekleyin."
+          }
+        }
+      }
+    },
+    "Amounts include the waste allowance you set. Check sizes and coverage on the product label before you buy.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Miktarlara belirlediğiniz fire payı dahildir. Almadan önce ürün etiketindeki ölçü ve kaplama alanını kontrol edin."
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Görünüm"
+          }
+        }
+      }
+    },
+    "Area to paint": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boyanacak alan"
+          }
+        }
+      }
+    },
+    "Area with waste": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fire dahil alan"
+          }
+        }
+      }
+    },
+    "Baseboard": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Süpürgelik"
+          }
+        }
+      }
+    },
+    "Bathroom": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Banyo"
+          }
+        }
+      }
+    },
+    "Bedroom": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yatak odası"
+          }
+        }
+      }
+    },
+    "Box covers": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir kutu"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vazgeç"
+          }
+        }
+      }
+    },
+    "Cans": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kutular"
+          }
+        }
+      }
+    },
+    "Ceiling": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tavan"
+          }
+        }
+      }
+    },
+    "Ceiling height": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tavan yüksekliği"
+          }
+        }
+      }
+    },
+    "Coats": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kat"
+          }
+        }
+      }
+    },
+    "Cost": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutar"
+          }
+        }
+      }
+    },
+    "Coverage": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaplama"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koyu"
+          }
+        }
+      }
+    },
+    "Delete room": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odayı sil"
+          }
+        }
+      }
+    },
+    "Delete this room?": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu oda silinsin mi?"
+          }
+        }
+      }
+    },
+    "Depth": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Derinlik"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitti"
+          }
+        }
+      }
+    },
+    "Door": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapı"
+          }
+        }
+      }
+    },
+    "Door openings left out": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Düşülen kapı açıklığı"
+          }
+        }
+      }
+    },
+    "Doors and windows": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapılar ve pencereler"
+          }
+        }
+      }
+    },
+    "Duplicate": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopyasını oluştur"
+          }
+        }
+      }
+    },
+    "Enter a room size and pick materials.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oda ölçülerini girip malzeme seçin."
+          }
+        }
+      }
+    },
+    "Enter size": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ölçü gir"
+          }
+        }
+      }
+    },
+    "Enter the ceiling height first.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önce tavan yüksekliğini girin."
+          }
+        }
+      }
+    },
+    "Enter the room size first.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önce oda ölçülerini girin."
+          }
+        }
+      }
+    },
+    "Estimated cost": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tahmini tutar"
+          }
+        }
+      }
+    },
+    "Everything stays on this iPhone. No account, no ads, no tracking. Room scanning uses Apple RoomPlan and the LiDAR sensor; the camera image never leaves the phone.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her şey bu iPhone'da kalır. Hesap yok, reklam yok, takip yok. Oda tarama Apple RoomPlan ve LiDAR sensörünü kullanır; kamera görüntüsü telefondan çıkmaz."
+          }
+        }
+      }
+    },
+    "Extra part": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ek bölüm"
+          }
+        }
+      }
+    },
+    "Extra part (L-shape, alcove)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ek bölüm (L şekli, girinti)"
+          }
+        }
+      }
+    },
+    "Extra part: the other leg of an L-shaped room or an alcove. Not covered: floor you won't cover, like kitchen cabinets.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ek bölüm: L şeklindeki odanın diğer kolu ya da bir girinti. Kaplanmayan alan: mutfak dolabı gibi kaplanmayacak zemin."
+          }
+        }
+      }
+    },
+    "Floor": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zemin"
+          }
+        }
+      }
+    },
+    "Floor area": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zemin alanı"
+          }
+        }
+      }
+    },
+    "Flooring": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parke / zemin"
+          }
+        }
+      }
+    },
+    "Grout": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Derz dolgusu"
+          }
+        }
+      }
+    },
+    "Height": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yükseklik"
+          }
+        }
+      }
+    },
+    "How much do I need?": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ne kadar lazım?"
+          }
+        }
+      }
+    },
+    "Imperial (ft, ft²)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İngiliz (ft, ft²)"
+          }
+        }
+      }
+    },
+    "Joint": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Derz"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dil"
+          }
+        }
+      }
+    },
+    "Length": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uzunluk"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Açık"
+          }
+        }
+      }
+    },
+    "Living room": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salon"
+          }
+        }
+      }
+    },
+    "Measure a room once. Get flooring, tile, paint, wallpaper and baseboard amounts in seconds.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odayı bir kez ölçün. Parke, fayans, boya, duvar kâğıdı ve süpürgelik miktarları saniyeler içinde hazır."
+          }
+        }
+      }
+    },
+    "Metric (m, m²)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metrik (m, m²)"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ad"
+          }
+        }
+      }
+    },
+    "No materials": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Malzeme seçilmedi"
+          }
+        }
+      }
+    },
+    "No rooms yet": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz oda yok"
+          }
+        }
+      }
+    },
+    "Not covered": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaplanmayan alan"
+          }
+        }
+      }
+    },
+    "Not covered (cabinets, island, tub)": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaplanmayan alan (dolap, ada, küvet)"
+          }
+        }
+      }
+    },
+    "Nothing to buy yet": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz alınacak bir şey yok"
+          }
+        }
+      }
+    },
+    "Paint": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boya"
+          }
+        }
+      }
+    },
+    "Pattern repeat": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desen tekrarı"
+          }
+        }
+      }
+    },
+    "Perimeter": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çevre"
+          }
+        }
+      }
+    },
+    "Piece length": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parça boyu"
+          }
+        }
+      }
+    },
+    "Price per %@": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birim fiyat / %@"
+          }
+        }
+      }
+    },
+    "Price per piece": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parça fiyatı"
+          }
+        }
+      }
+    },
+    "Price per roll": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rulo fiyatı"
+          }
+        }
+      }
+    },
+    "Privacy policy": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gizlilik politikası"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden adlandır"
+          }
+        }
+      }
+    },
+    "Rename room": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odayı yeniden adlandır"
+          }
+        }
+      }
+    },
+    "Roll length": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rulo boyu"
+          }
+        }
+      }
+    },
+    "Roll width": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rulo eni"
+          }
+        }
+      }
+    },
+    "Room": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oda"
+          }
+        }
+      }
+    },
+    "Room scanning works on iPhone Pro models with LiDAR. Typing the size works on every iPhone.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oda tarama LiDAR'lı iPhone Pro modellerinde çalışır. Ölçüleri yazmak her iPhone'da çalışır."
+          }
+        }
+      }
+    },
+    "Room size": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oda ölçüleri"
+          }
+        }
+      }
+    },
+    "Roomcalc follows your iPhone's language. You can pick another one for this app in Settings.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Roomcalc iPhone'unuzun dilini kullanır. Bu uygulama için Ayarlar'dan başka bir dil seçebilirsiniz."
+          }
+        }
+      }
+    },
+    "Rooms": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odalar"
+          }
+        }
+      }
+    },
+    "Scan a room": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odayı tara"
+          }
+        }
+      }
+    },
+    "Scan this room instead": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu odayı tara"
+          }
+        }
+      }
+    },
+    "Scanned with LiDAR": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LiDAR ile tarandı"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar"
+          }
+        }
+      }
+    },
+    "Shopping list": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alışveriş listesi"
+          }
+        }
+      }
+    },
+    "Size not entered yet": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ölçü henüz girilmedi"
+          }
+        }
+      }
+    },
+    "Sizes and prices": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ölçüler ve fiyatlar"
+          }
+        }
+      }
+    },
+    "Strips": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Şerit"
+          }
+        }
+      }
+    },
+    "Strips per roll": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rulo başına şerit"
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem"
+          }
+        }
+      }
+    },
+    "Taken off the wall area. Doors are also left out of baseboard and wallpaper.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar alanından düşülür. Kapılar süpürgelik ve duvar kâğıdından da çıkarılır."
+          }
+        }
+      }
+    },
+    "The scan is replaced by length and width you type. Doors and windows are kept.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tarama yerine yazdığınız uzunluk ve genişlik kullanılır. Kapı ve pencereler kalır."
+          }
+        }
+      }
+    },
+    "This room and its measurements are removed.": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu oda ve ölçüleri silinir."
+          }
+        }
+      }
+    },
+    "Tile": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fayans"
+          }
+        }
+      }
+    },
+    "Tile length": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fayans boyu"
+          }
+        }
+      }
+    },
+    "Tile size": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fayans ölçüsü"
+          }
+        }
+      }
+    },
+    "Tile thickness": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fayans kalınlığı"
+          }
+        }
+      }
+    },
+    "Tile width": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fayans eni"
+          }
+        }
+      }
+    },
+    "Type size": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elle yaz"
+          }
+        }
+      }
+    },
+    "Type the size instead": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ölçüleri elle yaz"
+          }
+        }
+      }
+    },
+    "Type the size instead?": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ölçüleri elle mi yazacaksınız?"
+          }
+        }
+      }
+    },
+    "Units": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birimler"
+          }
+        }
+      }
+    },
+    "Use scan": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taramayı kullan"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sürüm"
+          }
+        }
+      }
+    },
+    "Wall length": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar uzunluğu"
+          }
+        }
+      }
+    },
+    "Wallpaper": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar kâğıdı"
+          }
+        }
+      }
+    },
+    "Walls": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvarlar"
+          }
+        }
+      }
+    },
+    "Walls found": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bulunan duvar"
+          }
+        }
+      }
+    },
+    "Waste": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fire"
+          }
+        }
+      }
+    },
+    "Waste allowance": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fire payı"
+          }
+        }
+      }
+    },
+    "What are you buying?": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ne alacaksınız?"
+          }
+        }
+      }
+    },
+    "Width": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Genişlik"
+          }
+        }
+      }
+    },
+    "Window": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pencere"
+          }
+        }
+      }
+    },
+    "boxes": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kutu"
+          }
+        }
+      }
+    },
+    "grout": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "derz dolgusu"
+          }
+        }
+      }
+    },
+    "of paint": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "boya"
+          }
+        }
+      }
+    },
+    "pieces": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "parça"
+          }
+        }
+      }
+    },
+    "rolls": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rulo"
+          }
+        }
+      }
+    },
+    "tiles": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fayans"
+          }
+        }
+      }
+    },
+    "to buy": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "alınacak"
+          }
+        }
+      }
+    },
+    "total": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "toplam"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

@@ -1,7 +1,7 @@
-node_modules/
-dist/
 build/
+DerivedData/
+*.xcodeproj/
 .DS_Store
 *.log
 .claude/
-.cache/
+xcuserdata/
