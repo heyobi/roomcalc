@@ -45,8 +45,9 @@ struct HomeView: View {
                         ContentUnavailableView("No rooms yet", systemImage: "square.dashed",
                                                description: Text("Add your first room to see what to buy."))
                     }
-                    ForEach(store.rooms) { r in
+                    ForEach(Array(store.rooms.enumerated()), id: \.element.id) { i, r in
                         NavigationLink(value: Route.room(r.id)) { RoomRow(room: r) }
+                            .accessibilityIdentifier("room-\(i)")
                     }
                     .onDelete { idx in
                         let ids = idx.map { store.rooms[$0].id }

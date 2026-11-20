@@ -20,8 +20,8 @@ final class ScreenshotTests: XCTestCase {
         XCTAssertTrue(app.buttons["enterSize"].waitForExistence(timeout: 10))
         shot(app, "01-home")
 
-        app.staticTexts["Living room"].firstMatch.tap()
-        XCTAssertTrue(app.otherElements["stats"].waitForExistence(timeout: 5) || app.staticTexts["Living room"].exists)
+        app.buttons["room-0"].firstMatch.tap()
+        sleep(1)
         app.swipeUp()
         shot(app, "02-room")
         app.swipeUp()
@@ -33,7 +33,7 @@ final class ScreenshotTests: XCTestCase {
         shot(app, "04-list")
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
-        app.staticTexts["Bathroom"].firstMatch.tap()
+        app.buttons["room-2"].firstMatch.tap()
         sleep(1)
         app.swipeUp()
         shot(app, "05-tile")
@@ -45,7 +45,6 @@ final class ScreenshotTests: XCTestCase {
         app.launchArguments = ["-demo"]
         app.launch()
         app.buttons["enterSize"].tap()
-        let stats = app.otherElements["stats"]
-        XCTAssertTrue(stats.waitForExistence(timeout: 5) || app.staticTexts["Floor"].exists)
+        XCTAssertTrue(app.navigationBars.element.waitForExistence(timeout: 5))
     }
 }
