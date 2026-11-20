@@ -112,8 +112,7 @@ struct HomeView: View {
                 } label: {
                     Label("Enter size", systemImage: "ruler").frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.bordered)
-                .tint(canScan ? .accentColor : .accentColor)
+                .buttonStyle(EnterSizeStyle(prominent: !canScan))
                 .accessibilityIdentifier("enterSize")
             }
             .controlSize(.large)
@@ -159,5 +158,17 @@ struct RoomRow: View {
         guard res.g.floor > 0 else { return String(localized: "Size not entered yet") }
         let mats = Material.allCases.filter { room.m.isOn($0) }.map(\.titleText).joined(separator: ", ")
         return "\(u.area(res.g.floor)) · \(mats.isEmpty ? String(localized: "No materials") : mats)"
+    }
+}
+
+/// "Enter size" is the main button on phones without LiDAR, and the second one next to "Scan a room".
+private struct EnterSizeStyle: PrimitiveButtonStyle {
+    let prominent: Bool
+    func makeBody(configuration: Configuration) -> some View {
+        if prominent {
+            Button(role: configuration.role, action: configuration.trigger) { configuration.label }.buttonStyle(.borderedProminent)
+        } else {
+            Button(role: configuration.role, action: configuration.trigger) { configuration.label }.buttonStyle(.bordered)
+        }
     }
 }
