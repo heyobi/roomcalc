@@ -1,0 +1,10 @@
+{
+  "appId": "com.heyobi.roomcalc",
+  "appName": "Roomcalc",
+  "webDir": "dist",
+  "ios": { "contentInset": "never", "scrollEnabled": true },
+  "plugins": {
+    "SplashScreen": { "launchAutoHide": false, "backgroundColor": "#101114" },
+    "Keyboard": { "resize": "native" }
+  }
+}
